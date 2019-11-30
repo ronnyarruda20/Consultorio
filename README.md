@@ -1,6 +1,8 @@
 # Consultório
 Projeto de exemplo simples usando spring boot 2 (2.2.1.RELEASE) + graphQL (5.6.1 - tools)
 
+Para acessar os exemplos do crud em graphQL basta colar o seguinte link no seu nagevador 
+[http://localhost:8080/graphiql](http://localhost:8080/graphiql)
 # 
 
 #### Exemplo da consulta de todos os pacientes 
