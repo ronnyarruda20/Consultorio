@@ -1,2 +1,2 @@
 # Consultorio
-Projeto de exemplo simples usando graphQL
+Projeto de exemplo simples usando spring boot + graphQL 

@@ -16,11 +16,22 @@ public class PacienteService {
 
 	}
 
-	public void salvar(Paciente paciente) {
+	public List<Paciente> findAll(){
+		return pacienteReposiory.findAll();
+	}
+	
+	public void salvar(PacienteDTO pacienteDTO) {
+		Paciente paciente = new Paciente();
+		paciente.setNome(pacienteDTO.getNome());
+		paciente.setEndereco(pacienteDTO.getEndereco());
+		paciente.setProfissao(pacienteDTO.getProfissao());
+		paciente.setTelefone(pacienteDTO.getTelefone());
+		paciente.setDataNasimento(pacienteDTO.getDataNasimento());
 		pacienteReposiory.save(paciente);
 	}
 	
-	public List<Paciente> findAll(){
-		return pacienteReposiory.findAll();
+	public void excluir(Long id) {
+		Paciente paciente = findById(id);
+		pacienteReposiory.delete(paciente);
 	}
 }

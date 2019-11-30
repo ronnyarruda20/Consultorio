@@ -1,9 +1,24 @@
 
 type Query {
-	#Paciente
+	#Paciente query
 	consultarPacientePorId(id: Long!): Paciente
+	#Paciente query
 	consultarTodosPacientes:[Paciente]
+}
 
+type Mutation {
+	#Paciente mutation
+	incluirPaciente(pacienteDTO: PacienteDTO!): Boolean
+	excluirPaciente(id: Long!):Boolean
+}
+
+input PacienteDTO {
+	id:Long
+	nome:String
+	endereco:String	
+	telefone:String	
+	dataNasimento:String
+	profissao:String
 }
 
 type Paciente {

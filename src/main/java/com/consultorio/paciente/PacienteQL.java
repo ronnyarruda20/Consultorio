@@ -22,5 +22,12 @@ public class PacienteQL implements GraphQLQueryResolver, GraphQLMutationResolver
 		return pacienteService.findAll();
 	}
 	
+	public void incluirPaciente(PacienteDTO PacienteDTO) {
+		pacienteService.salvar(PacienteDTO);
+	}
+	
+	public void excluirPaciente(Long id) {
+		pacienteService.excluir(id);
+	}
 
 }
