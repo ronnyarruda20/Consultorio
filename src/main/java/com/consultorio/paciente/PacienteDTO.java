@@ -1,26 +1,21 @@
 package com.consultorio.paciente;
 
-import lombok.Getter;
-import lombok.Setter;
+import java.util.Date;
+import java.util.List;
 
+import org.springframework.format.annotation.DateTimeFormat;
 
+import lombok.Data;
+
+@Data
 public class PacienteDTO {
 
-	@Getter @Setter
 	private Long id;
-	
-	@Getter @Setter
+
 	private String nome;
-	
-	@Getter @Setter
-	private String endereco;
 
-	@Getter @Setter
-	private String telefone;
+	@DateTimeFormat(pattern = "dd-MM-yyyy HH:mm:ss")
+	private Date dataNascimento;
 
-	@Getter @Setter
-	private String dataNasimento;
-
-	@Getter @Setter
-	private String profissao; 
+	private List<Long> profissoes; 
 }
