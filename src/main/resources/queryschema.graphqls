@@ -15,17 +15,20 @@ type Mutation {
 input PacienteDTO {
 	id:Long
 	nome:String
-	endereco:String	
-	telefone:String	
-	dataNasimento:String
-	profissao:String
+	dataNascimento:String
+	profissoes:[Long]
 }
 
 type Paciente {
-	id:Long
+	id:ID
 	nome:String
-	endereco:String	
-	telefone:String	
-	dataNasimento:String
-	profissao:String
+	dataNascimento:String
+	profissoes:[Profissao]
+}
+
+type Profissao {
+	id: ID
+	codigo: String
+	descricao: String
+
 }

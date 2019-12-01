@@ -11,4 +11,4 @@ spring:
       platform: h2 # para rodar script data-h2.sql
    jpa:
       hibernate:
-         ddl-auto: update
+         ddl-auto: create
